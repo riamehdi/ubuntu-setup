@@ -65,6 +65,8 @@ nvm alias default 16
 node --version
 npm --version
 
+source ~/.bashrc
+
 clear
 
 echo 'All tools successfully installed. You are ready to shine :).'
