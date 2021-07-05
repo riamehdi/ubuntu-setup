@@ -4,11 +4,34 @@ echo "Welcome! Let's start setting up your system xD It could take more than 10 
 
 sudo apt-get update
 
+echo 'installing Openjdk-8-jdk'
+sudo apt install openjdk-8-jdk
+
+echo "export LD_LIBRARY_PATH=${HOME}/libs/" >> .bashrc
+source ~/.bashrc
+echo $LD_LIBRARY_PATH
+
 echo 'installing curl'
 sudo apt install curl -y
 
 echo 'installing vim'
 sudo apt install vim -y
+
+echo 'installing stacer'
+sudo apt-get install stacer -y
+
+echo 'installing screen'
+sudo apt install screen
+
+echo 'installing ADB'
+sudo apt-get install -y android-tools-adb android-tools-fastboot
+
+echo 'installing scrcpy'
+sudo apt install scrcpy
+
+echo 'installing Scanner Ip adresse Network'
+sudo apt-get install arp-scan
+
 clear
 
 echo 'installing git'
@@ -68,5 +91,19 @@ npm --version
 source ~/.bashrc
 
 clear
+
+echo 'installing EMQX'
+sudo curl https://repos.emqx.io/install_emqx.sh | bash
+emqx start
+
+clear
+
+echo 'start '
+touch $HOME/java.sh
+mkdir $HOME/.dooha
+touch $HOME/.dooha/config_box_1.xml
+touch $HOME/.dooha/config_box_2.xml
+touch $HOME/.dooha/config_box_3.xml
+touch $HOME/.dooha/config_box_4.xml
 
 echo 'All tools successfully installed. You are ready to shine :).'
